@@ -1,0 +1,44 @@
+﻿@model IEnumerable<formulaFrontEnd.ViewModels.Coment>
+
+@{ ViewData["Title"] = "Coment"; }
+
+<h1>Coment</h1>
+
+
+
+<table class="table bg-light table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.comentId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.coment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.createdAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.driverId)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.comentId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.coment)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.createdAt)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.driverId)
+    </td>
+</tr>}
+    </tbody>
+</table>
